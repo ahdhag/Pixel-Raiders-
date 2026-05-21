@@ -1,0 +1,35 @@
+{
+  "name": "GameStats",
+  "type": "object",
+  "properties": {
+    "player_email": {
+      "type": "string"
+    },
+    "total_kills": {
+      "type": "number",
+      "default": 0
+    },
+    "total_deaths": {
+      "type": "number",
+      "default": 0
+    },
+    "highest_wave": {
+      "type": "number",
+      "default": 0
+    },
+    "total_score": {
+      "type": "number",
+      "default": 0
+    },
+    "games_played": {
+      "type": "number",
+      "default": 0
+    },
+    "favorite_weapon": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "player_email"
+  ]
+}
