@@ -1,0 +1,81 @@
+{
+  "name": "GameRoom",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Room name"
+    },
+    "host_email": {
+      "type": "string",
+      "description": "Host player email"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "playing",
+        "ended"
+      ],
+      "default": "waiting"
+    },
+    "max_players": {
+      "type": "number",
+      "default": 4
+    },
+    "current_wave": {
+      "type": "number",
+      "default": 1
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "easy",
+            "normal",
+            "hard",
+            "nightmare"
+          ]
+        },
+        "friendly_fire": {
+          "type": "boolean"
+        },
+        "spawn_rate": {
+          "type": "number"
+        }
+      }
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          },
+          "is_admin": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "banned_players": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "host_email"
+  ]
+}
