@@ -1,0 +1,35 @@
+{
+  "name": "MultiplayerSession",
+  "type": "object",
+  "properties": {
+    "room_code": {
+      "type": "string",
+      "description": "\u623f\u9593\u4ee3\u78bc"
+    },
+    "host_email": {
+      "type": "string",
+      "description": "\u623f\u4e3b\u90f5\u7bb1"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "playing",
+        "ended"
+      ],
+      "default": "waiting"
+    },
+    "max_players": {
+      "type": "number",
+      "default": 4
+    },
+    "current_wave": {
+      "type": "number",
+      "default": 1
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+ 
